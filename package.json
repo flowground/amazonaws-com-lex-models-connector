@@ -1,7 +1,7 @@
 {
     "name": "amazonaws-com-lex-models-connector",
     "version": "2017.0.0",
-    "description": "<fullname>Amazon Lex Build-Time Actions</fullname> <p> Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update, and delete conversational bots for new and existing client applications. </p>",
+    "description": "Amazon Lex Build-Time Actions  Amazon Lex is an AWS service for building\nconversational voice and text interfaces. Use these actions to create, update,\nand delete conversational bots for new and existing client applications.",
     "main": "component.json",
     "dependencies": {
         "elasticio-node": "0.0.9",

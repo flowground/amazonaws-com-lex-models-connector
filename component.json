@@ -1,6 +1,6 @@
 {
     "title": "Amazon Lex Model Building Service",
-    "description": "<fullname>Amazon Lex Build-Time Actions</fullname> <p> Amazon Lex is an AWS service for building conversational voice and text interfaces. Use these actions to create, update, and delete conversational bots for new and existing client applications. </p>",
+    "description": "Amazon Lex Build-Time Actions  Amazon Lex is an AWS service for building\nconversational voice and text interfaces. Use these actions to create, update,\nand delete conversational bots for new and existing client applications.",
     "docsUrl": "https://docs.aws.amazon.com/lex/",
     "url": "https://api.apis.guru/v2/specs/amazonaws.com/lex-models/2017-04-19/swagger.json",
     "envVars": {},
@@ -20,7 +20,7 @@
                 "label": "Custom Server URL",
                 "viewClass": "TextFieldView"
             },
-            "hmac": {
+            "auth_hmac": {
                 "label": "Authorization (hmac)",
                 "viewClass": "TextFieldView",
                 "note": "Amazon Signature authorization v4"
@@ -38,8 +38,8 @@
     "actions": {
         "GetBots": {
             "main": "./lib/actions/GetBots.js",
-            "title": "<p>Returns bot information as follows: </p> <ul> <li> <p>If you provide the <code>nameContains</code> field, the response includes information for the <code>$LATEST</code> version of all bots whose name contains the specified string.</p> </li> <li> <p>If you don't specify the <code>nameContains</code> field, the operation returns information about the <code>$LATEST</code> version of all of your bots.</p> </li> </ul> <p>This operation requires permission for the <code>lex:GetBots</code> action.</p>",
-            "description": "<p>Returns bot information as follows: </p> <ul> <li> <p>If you provide the <code>nameContains</code> field, the response includes information for the <code>$LATEST</code> version of all bots whose name contains the specified string.</p> </li> <li> <p>If you don't specify the <code>nameContains</code> field, the operation returns information about the <code>$LATEST</code> version of all of your bots.</p> </li> </ul> <p>This operation requires permission for the <code>lex:GetBots</code> action.</p>",
+            "title": "GetBots",
+            "description": "Returns bot information as follows: \n\n *  If you provide the nameContains field, the response includes information for\n   the $LATEST version of all bots whose name contains the specified string.\n   \n   \n *  If you don't specify the nameContains field, the operation returns\n   information about the $LATEST version of all of your bots.\n   \n   \n\nThis operation requires permission for the lex:GetBots action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -55,8 +55,8 @@
         },
         "GetBotAliases": {
             "main": "./lib/actions/GetBotAliases.js",
-            "title": "<p>Returns a list of aliases for a specified Amazon Lex bot.</p> <p>This operation requires permissions for the <code>lex:GetBotAliases</code> action.</p>",
-            "description": "<p>Returns a list of aliases for a specified Amazon Lex bot.</p> <p>This operation requires permissions for the <code>lex:GetBotAliases</code> action.</p>",
+            "title": "GetBotAliases",
+            "description": "Returns a list of aliases for a specified Amazon Lex bot.\n\nThis operation requires permissions for the lex:GetBotAliases action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -72,8 +72,8 @@
         },
         "GetBotChannelAssociations": {
             "main": "./lib/actions/GetBotChannelAssociations.js",
-            "title": "<p> Returns a list of all of the channels associated with the specified bot. </p> <p>The <code>GetBotChannelAssociations</code> operation requires permissions for the <code>lex:GetBotChannelAssociations</code> action.</p>",
-            "description": "<p> Returns a list of all of the channels associated with the specified bot. </p> <p>The <code>GetBotChannelAssociations</code> operation requires permissions for the <code>lex:GetBotChannelAssociations</code> action.</p>",
+            "title": "GetBotChannelAssociations",
+            "description": " Returns a list of all of the channels associated with the specified bot. \n\nThe GetBotChannelAssociations operation requires permissions for the \nlex:GetBotChannelAssociations action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -89,8 +89,8 @@
         },
         "DeleteBotChannelAssociation": {
             "main": "./lib/actions/DeleteBotChannelAssociation.js",
-            "title": "<p>Deletes the association between an Amazon Lex bot and a messaging platform.</p> <p>This operation requires permission for the <code>lex:DeleteBotChannelAssociation</code> action.</p>",
-            "description": "<p>Deletes the association between an Amazon Lex bot and a messaging platform.</p> <p>This operation requires permission for the <code>lex:DeleteBotChannelAssociation</code> action.</p>",
+            "title": "DeleteBotChannelAssociation",
+            "description": "Deletes the association between an Amazon Lex bot and a messaging platform.\n\nThis operation requires permission for the lex:DeleteBotChannelAssociation \naction.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -106,8 +106,8 @@
         },
         "GetBotChannelAssociation": {
             "main": "./lib/actions/GetBotChannelAssociation.js",
-            "title": "<p>Returns information about the association between an Amazon Lex bot and a messaging platform.</p> <p>This operation requires permissions for the <code>lex:GetBotChannelAssociation</code> action.</p>",
-            "description": "<p>Returns information about the association between an Amazon Lex bot and a messaging platform.</p> <p>This operation requires permissions for the <code>lex:GetBotChannelAssociation</code> action.</p>",
+            "title": "GetBotChannelAssociation",
+            "description": "Returns information about the association between an Amazon Lex bot and a\nmessaging platform.\n\nThis operation requires permissions for the lex:GetBotChannelAssociation action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -123,8 +123,8 @@
         },
         "DeleteBotAlias": {
             "main": "./lib/actions/DeleteBotAlias.js",
-            "title": "<p>Deletes an alias for the specified bot. </p> <p>You can't delete an alias that is used in the association between a bot and a messaging channel. If an alias is used in a channel association, the <code>DeleteBot</code> operation returns a <code>ResourceInUseException</code> exception that includes a reference to the channel association that refers to the bot. You can remove the reference to the alias by deleting the channel association. If you get the same exception again, delete the referring association until the <code>DeleteBotAlias</code> operation is successful.</p>",
-            "description": "<p>Deletes an alias for the specified bot. </p> <p>You can't delete an alias that is used in the association between a bot and a messaging channel. If an alias is used in a channel association, the <code>DeleteBot</code> operation returns a <code>ResourceInUseException</code> exception that includes a reference to the channel association that refers to the bot. You can remove the reference to the alias by deleting the channel association. If you get the same exception again, delete the referring association until the <code>DeleteBotAlias</code> operation is successful.</p>",
+            "title": "DeleteBotAlias",
+            "description": "Deletes an alias for the specified bot. \n\nYou can't delete an alias that is used in the association between a bot and a\nmessaging channel. If an alias is used in a channel association, the DeleteBot \noperation returns a ResourceInUseException exception that includes a reference\nto the channel association that refers to the bot. You can remove the reference\nto the alias by deleting the channel association. If you get the same exception\nagain, delete the referring association until the DeleteBotAlias operation is\nsuccessful.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -140,8 +140,8 @@
         },
         "GetBotAlias": {
             "main": "./lib/actions/GetBotAlias.js",
-            "title": "<p>Returns information about an Amazon Lex bot alias. For more information about aliases, see <a>versioning-aliases</a>.</p> <p>This operation requires permissions for the <code>lex:GetBotAlias</code> action.</p>",
-            "description": "<p>Returns information about an Amazon Lex bot alias. For more information about aliases, see <a>versioning-aliases</a>.</p> <p>This operation requires permissions for the <code>lex:GetBotAlias</code> action.</p>",
+            "title": "GetBotAlias",
+            "description": "Returns information about an Amazon Lex bot alias. For more information about\naliases, see versioning-aliases.\n\nThis operation requires permissions for the lex:GetBotAlias action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -157,8 +157,8 @@
         },
         "PutBotAlias": {
             "main": "./lib/actions/PutBotAlias.js",
-            "title": "<p>Creates an alias for the specified version of the bot or replaces an alias for the specified bot. To change the version of the bot that the alias points to, replace the alias. For more information about aliases, see <a>versioning-aliases</a>.</p> <p>This operation requires permissions for the <code>lex:PutBotAlias</code> action. </p>",
-            "description": "<p>Creates an alias for the specified version of the bot or replaces an alias for the specified bot. To change the version of the bot that the alias points to, replace the alias. For more information about aliases, see <a>versioning-aliases</a>.</p> <p>This operation requires permissions for the <code>lex:PutBotAlias</code> action. </p>",
+            "title": "PutBotAlias",
+            "description": "Creates an alias for the specified version of the bot or replaces an alias for\nthe specified bot. To change the version of the bot that the alias points to,\nreplace the alias. For more information about aliases, see versioning-aliases.\n\nThis operation requires permissions for the lex:PutBotAlias action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -174,8 +174,8 @@
         },
         "DeleteUtterances": {
             "main": "./lib/actions/DeleteUtterances.js",
-            "title": "<p>Deletes stored utterances.</p> <p>Amazon Lex stores the utterances that users send to your bot. Utterances are stored for 15 days for use with the <a>GetUtterancesView</a> operation, and then stored indefinitely for use in improving the ability of your bot to respond to user input.</p> <p>Use the <code>DeleteStoredUtterances</code> operation to manually delete stored utterances for a specific user.</p> <p>This operation requires permissions for the <code>lex:DeleteUtterances</code> action.</p>",
-            "description": "<p>Deletes stored utterances.</p> <p>Amazon Lex stores the utterances that users send to your bot. Utterances are stored for 15 days for use with the <a>GetUtterancesView</a> operation, and then stored indefinitely for use in improving the ability of your bot to respond to user input.</p> <p>Use the <code>DeleteStoredUtterances</code> operation to manually delete stored utterances for a specific user.</p> <p>This operation requires permissions for the <code>lex:DeleteUtterances</code> action.</p>",
+            "title": "DeleteUtterances",
+            "description": "Deletes stored utterances.\n\nAmazon Lex stores the utterances that users send to your bot. Utterances are\nstored for 15 days for use with the GetUtterancesView operation, and then stored\nindefinitely for use in improving the ability of your bot to respond to user\ninput.\n\nUse the DeleteStoredUtterances operation to manually delete stored utterances\nfor a specific user.\n\nThis operation requires permissions for the lex:DeleteUtterances action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -191,8 +191,8 @@
         },
         "GetUtterancesView": {
             "main": "./lib/actions/GetUtterancesView.js",
-            "title": "<p>Use the <code>GetUtterancesView</code> operation to get information about the utterances that your users have made to your bot. You can use this list to tune the utterances that your bot responds to.</p> <p>For example, say that you have created a bot to order flowers. After your users have used your bot for a while, use the <code>GetUtterancesView</code> operation to see the requests that they have made and whether they have been successful. You might find that the utterance \"I want flowers\" is not being recognized. You could add this utterance to the <code>OrderFlowers</code> intent so that your bot recognizes that utterance.</p> <p>After you publish a new version of a bot, you can get information about the old version and the new so that you can compare the performance across the two versions. </p> <note> <p>Utterance statistics are generated once a day. Data is available for the last 15 days. You can request information for up to 5 versions in each request. The response contains information about a maximum of 100 utterances for each version.</p> </note> <p>This operation requires permissions for the <code>lex:GetUtterancesView</code> action.</p>",
-            "description": "<p>Use the <code>GetUtterancesView</code> operation to get information about the utterances that your users have made to your bot. You can use this list to tune the utterances that your bot responds to.</p> <p>For example, say that you have created a bot to order flowers. After your users have used your bot for a while, use the <code>GetUtterancesView</code> operation to see the requests that they have made and whether they have been successful. You might find that the utterance \"I want flowers\" is not being recognized. You could add this utterance to the <code>OrderFlowers</code> intent so that your bot recognizes that utterance.</p> <p>After you publish a new version of a bot, you can get information about the old version and the new so that you can compare the performance across the two versions. </p> <note> <p>Utterance statistics are generated once a day. Data is available for the last 15 days. You can request information for up to 5 versions in each request. The response contains information about a maximum of 100 utterances for each version.</p> </note> <p>This operation requires permissions for the <code>lex:GetUtterancesView</code> action.</p>",
+            "title": "GetUtterancesView",
+            "description": "Use the GetUtterancesView operation to get information about the utterances that\nyour users have made to your bot. You can use this list to tune the utterances\nthat your bot responds to.\n\nFor example, say that you have created a bot to order flowers. After your users\nhave used your bot for a while, use the GetUtterancesView operation to see the\nrequests that they have made and whether they have been successful. You might\nfind that the utterance \"I want flowers\" is not being recognized. You could add\nthis utterance to the OrderFlowers intent so that your bot recognizes that\nutterance.\n\nAfter you publish a new version of a bot, you can get information about the old\nversion and the new so that you can compare the performance across the two\nversions. \n\nUtterance statistics are generated once a day. Data is available for the last 15\ndays. You can request information for up to 5 versions in each request. The\nresponse contains information about a maximum of 100 utterances for each\nversion.\n\nThis operation requires permissions for the lex:GetUtterancesView action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -208,8 +208,8 @@
         },
         "DeleteBot": {
             "main": "./lib/actions/DeleteBot.js",
-            "title": "<p>Deletes all versions of the bot, including the <code>$LATEST</code> version. To delete a specific version of the bot, use the <a>DeleteBotVersion</a> operation.</p> <p>If a bot has an alias, you can't delete it. Instead, the <code>DeleteBot</code> operation returns a <code>ResourceInUseException</code> exception that includes a reference to the alias that refers to the bot. To remove the reference to the bot, delete the alias. If you get the same exception again, delete the referring alias until the <code>DeleteBot</code> operation is successful.</p> <p>This operation requires permissions for the <code>lex:DeleteBot</code> action.</p>",
-            "description": "<p>Deletes all versions of the bot, including the <code>$LATEST</code> version. To delete a specific version of the bot, use the <a>DeleteBotVersion</a> operation.</p> <p>If a bot has an alias, you can't delete it. Instead, the <code>DeleteBot</code> operation returns a <code>ResourceInUseException</code> exception that includes a reference to the alias that refers to the bot. To remove the reference to the bot, delete the alias. If you get the same exception again, delete the referring alias until the <code>DeleteBot</code> operation is successful.</p> <p>This operation requires permissions for the <code>lex:DeleteBot</code> action.</p>",
+            "title": "DeleteBot",
+            "description": "Deletes all versions of the bot, including the $LATEST version. To delete a\nspecific version of the bot, use the DeleteBotVersion operation.\n\nIf a bot has an alias, you can't delete it. Instead, the DeleteBot operation\nreturns a ResourceInUseException exception that includes a reference to the\nalias that refers to the bot. To remove the reference to the bot, delete the\nalias. If you get the same exception again, delete the referring alias until the \nDeleteBot operation is successful.\n\nThis operation requires permissions for the lex:DeleteBot action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -225,8 +225,8 @@
         },
         "CreateBotVersion": {
             "main": "./lib/actions/CreateBotVersion.js",
-            "title": "<p>Creates a new version of the bot based on the <code>$LATEST</code> version. If the <code>$LATEST</code> version of this resource hasn't changed since you created the last version, Amazon Lex doesn't create a new version. It returns the last created version.</p> <note> <p>You can update only the <code>$LATEST</code> version of the bot. You can't update the numbered versions that you create with the <code>CreateBotVersion</code> operation.</p> </note> <p> When you create the first version of a bot, Amazon Lex sets the version to 1. Subsequent versions increment by 1. For more information, see <a>versioning-intro</a>. </p> <p> This operation requires permission for the <code>lex:CreateBotVersion</code> action. </p>",
-            "description": "<p>Creates a new version of the bot based on the <code>$LATEST</code> version. If the <code>$LATEST</code> version of this resource hasn't changed since you created the last version, Amazon Lex doesn't create a new version. It returns the last created version.</p> <note> <p>You can update only the <code>$LATEST</code> version of the bot. You can't update the numbered versions that you create with the <code>CreateBotVersion</code> operation.</p> </note> <p> When you create the first version of a bot, Amazon Lex sets the version to 1. Subsequent versions increment by 1. For more information, see <a>versioning-intro</a>. </p> <p> This operation requires permission for the <code>lex:CreateBotVersion</code> action. </p>",
+            "title": "CreateBotVersion",
+            "description": "Creates a new version of the bot based on the $LATEST version. If the $LATEST \nversion of this resource hasn't changed since you created the last version,\nAmazon Lex doesn't create a new version. It returns the last created version.\n\nYou can update only the $LATEST version of the bot. You can't update the\nnumbered versions that you create with the CreateBotVersion operation.\n\n When you create the first version of a bot, Amazon Lex sets the version to 1.\nSubsequent versions increment by 1. For more information, see versioning-intro. \n\n This operation requires permission for the lex:CreateBotVersion action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -242,8 +242,8 @@
         },
         "GetBotVersions": {
             "main": "./lib/actions/GetBotVersions.js",
-            "title": "<p>Gets information about all of the versions of a bot.</p> <p>The <code>GetBotVersions</code> operation returns a <code>BotMetadata</code> object for each version of a bot. For example, if a bot has three numbered versions, the <code>GetBotVersions</code> operation returns four <code>BotMetadata</code> objects in the response, one for each numbered version and one for the <code>$LATEST</code> version. </p> <p>The <code>GetBotVersions</code> operation always returns at least one version, the <code>$LATEST</code> version.</p> <p>This operation requires permissions for the <code>lex:GetBotVersions</code> action.</p>",
-            "description": "<p>Gets information about all of the versions of a bot.</p> <p>The <code>GetBotVersions</code> operation returns a <code>BotMetadata</code> object for each version of a bot. For example, if a bot has three numbered versions, the <code>GetBotVersions</code> operation returns four <code>BotMetadata</code> objects in the response, one for each numbered version and one for the <code>$LATEST</code> version. </p> <p>The <code>GetBotVersions</code> operation always returns at least one version, the <code>$LATEST</code> version.</p> <p>This operation requires permissions for the <code>lex:GetBotVersions</code> action.</p>",
+            "title": "GetBotVersions",
+            "description": "Gets information about all of the versions of a bot.\n\nThe GetBotVersions operation returns a BotMetadata object for each version of a\nbot. For example, if a bot has three numbered versions, the GetBotVersions \noperation returns four BotMetadata objects in the response, one for each\nnumbered version and one for the $LATEST version. \n\nThe GetBotVersions operation always returns at least one version, the $LATEST \nversion.\n\nThis operation requires permissions for the lex:GetBotVersions action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -259,8 +259,8 @@
         },
         "PutBot": {
             "main": "./lib/actions/PutBot.js",
-            "title": "<p>Creates an Amazon Lex conversational bot or replaces an existing bot. When you create or update a bot you are only required to specify a name, a locale, and whether the bot is directed toward children under age 13. You can use this to add intents later, or to remove intents from an existing bot. When you create a bot with the minimum information, the bot is created or updated but Amazon Lex returns the <code/> response <code>FAILED</code>. You can build the bot after you add one or more intents. For more information about Amazon Lex bots, see <a>how-it-works</a>. </p> <p>If you specify the name of an existing bot, the fields in the request replace the existing values in the <code>$LATEST</code> version of the bot. Amazon Lex removes any fields that you don't provide values for in the request, except for the <code>idleTTLInSeconds</code> and <code>privacySettings</code> fields, which are set to their default values. If you don't specify values for required fields, Amazon Lex throws an exception.</p> <p>This operation requires permissions for the <code>lex:PutBot</code> action. For more information, see <a>auth-and-access-control</a>.</p>",
-            "description": "<p>Creates an Amazon Lex conversational bot or replaces an existing bot. When you create or update a bot you are only required to specify a name, a locale, and whether the bot is directed toward children under age 13. You can use this to add intents later, or to remove intents from an existing bot. When you create a bot with the minimum information, the bot is created or updated but Amazon Lex returns the <code/> response <code>FAILED</code>. You can build the bot after you add one or more intents. For more information about Amazon Lex bots, see <a>how-it-works</a>. </p> <p>If you specify the name of an existing bot, the fields in the request replace the existing values in the <code>$LATEST</code> version of the bot. Amazon Lex removes any fields that you don't provide values for in the request, except for the <code>idleTTLInSeconds</code> and <code>privacySettings</code> fields, which are set to their default values. If you don't specify values for required fields, Amazon Lex throws an exception.</p> <p>This operation requires permissions for the <code>lex:PutBot</code> action. For more information, see <a>auth-and-access-control</a>.</p>",
+            "title": "PutBot",
+            "description": "Creates an Amazon Lex conversational bot or replaces an existing bot. When you\ncreate or update a bot you are only required to specify a name, a locale, and\nwhether the bot is directed toward children under age 13. You can use this to\nadd intents later, or to remove intents from an existing bot. When you create a\nbot with the minimum information, the bot is created or updated but Amazon Lex\nreturns the response FAILED. You can build the bot after you add one or more\nintents. For more information about Amazon Lex bots, see how-it-works. \n\nIf you specify the name of an existing bot, the fields in the request replace\nthe existing values in the $LATEST version of the bot. Amazon Lex removes any\nfields that you don't provide values for in the request, except for the \nidleTTLInSeconds and privacySettings fields, which are set to their default\nvalues. If you don't specify values for required fields, Amazon Lex throws an\nexception.\n\nThis operation requires permissions for the lex:PutBot action. For more\ninformation, see auth-and-access-control.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -276,8 +276,8 @@
         },
         "GetBot": {
             "main": "./lib/actions/GetBot.js",
-            "title": "<p>Returns metadata information for a specific bot. You must provide the bot name and the bot version or alias. </p> <p> This operation requires permissions for the <code>lex:GetBot</code> action. </p>",
-            "description": "<p>Returns metadata information for a specific bot. You must provide the bot name and the bot version or alias. </p> <p> This operation requires permissions for the <code>lex:GetBot</code> action. </p>",
+            "title": "GetBot",
+            "description": "Returns metadata information for a specific bot. You must provide the bot name\nand the bot version or alias. \n\n This operation requires permissions for the lex:GetBot action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -293,8 +293,8 @@
         },
         "DeleteBotVersion": {
             "main": "./lib/actions/DeleteBotVersion.js",
-            "title": "<p>Deletes a specific version of a bot. To delete all versions of a bot, use the <a>DeleteBot</a> operation. </p> <p>This operation requires permissions for the <code>lex:DeleteBotVersion</code> action.</p>",
-            "description": "<p>Deletes a specific version of a bot. To delete all versions of a bot, use the <a>DeleteBot</a> operation. </p> <p>This operation requires permissions for the <code>lex:DeleteBotVersion</code> action.</p>",
+            "title": "DeleteBotVersion",
+            "description": "Deletes a specific version of a bot. To delete all versions of a bot, use the \nDeleteBot operation. \n\nThis operation requires permissions for the lex:DeleteBotVersion action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -310,8 +310,8 @@
         },
         "GetBuiltinIntents": {
             "main": "./lib/actions/GetBuiltinIntents.js",
-            "title": "<p>Gets a list of built-in intents that meet the specified criteria.</p> <p>This operation requires permission for the <code>lex:GetBuiltinIntents</code> action.</p>",
-            "description": "<p>Gets a list of built-in intents that meet the specified criteria.</p> <p>This operation requires permission for the <code>lex:GetBuiltinIntents</code> action.</p>",
+            "title": "GetBuiltinIntents",
+            "description": "Gets a list of built-in intents that meet the specified criteria.\n\nThis operation requires permission for the lex:GetBuiltinIntents action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -327,8 +327,8 @@
         },
         "GetBuiltinIntent": {
             "main": "./lib/actions/GetBuiltinIntent.js",
-            "title": "<p>Returns information about a built-in intent.</p> <p>This operation requires permission for the <code>lex:GetBuiltinIntent</code> action.</p>",
-            "description": "<p>Returns information about a built-in intent.</p> <p>This operation requires permission for the <code>lex:GetBuiltinIntent</code> action.</p>",
+            "title": "GetBuiltinIntent",
+            "description": "Returns information about a built-in intent.\n\nThis operation requires permission for the lex:GetBuiltinIntent action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -344,8 +344,8 @@
         },
         "GetBuiltinSlotTypes": {
             "main": "./lib/actions/GetBuiltinSlotTypes.js",
-            "title": "<p>Gets a list of built-in slot types that meet the specified criteria.</p> <p>For a list of built-in slot types, see <a href=\"https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/slot-type-reference\">Slot Type Reference</a> in the <i>Alexa Skills Kit</i>.</p> <p>This operation requires permission for the <code>lex:GetBuiltInSlotTypes</code> action.</p>",
-            "description": "<p>Gets a list of built-in slot types that meet the specified criteria.</p> <p>For a list of built-in slot types, see <a href=\"https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/slot-type-reference\">Slot Type Reference</a> in the <i>Alexa Skills Kit</i>.</p> <p>This operation requires permission for the <code>lex:GetBuiltInSlotTypes</code> action.</p>",
+            "title": "GetBuiltinSlotTypes",
+            "description": "Gets a list of built-in slot types that meet the specified criteria.\n\nFor a list of built-in slot types, see Slot Type Reference\n[https://developer.amazon.com/public/solutions/alexa/alexa-skills-kit/docs/built-in-intent-ref/slot-type-reference] \nin the Alexa Skills Kit.\n\nThis operation requires permission for the lex:GetBuiltInSlotTypes action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -361,7 +361,7 @@
         },
         "GetExport": {
             "main": "./lib/actions/GetExport.js",
-            "title": "Exports the contents of a Amazon Lex resource in a specified format. ",
+            "title": "GetExport",
             "description": "Exports the contents of a Amazon Lex resource in a specified format. ",
             "fields": {
                 "verbose": {
@@ -378,7 +378,7 @@
         },
         "StartImport": {
             "main": "./lib/actions/StartImport.js",
-            "title": "Starts a job to import a resource to Amazon Lex.",
+            "title": "StartImport",
             "description": "Starts a job to import a resource to Amazon Lex.",
             "fields": {
                 "verbose": {
@@ -395,7 +395,7 @@
         },
         "GetImport": {
             "main": "./lib/actions/GetImport.js",
-            "title": "Gets information about an import job started with the <code>StartImport</code> operation.",
+            "title": "GetImport",
             "description": "Gets information about an import job started with the <code>StartImport</code> operation.",
             "fields": {
                 "verbose": {
@@ -412,8 +412,8 @@
         },
         "GetIntents": {
             "main": "./lib/actions/GetIntents.js",
-            "title": "<p>Returns intent information as follows: </p> <ul> <li> <p>If you specify the <code>nameContains</code> field, returns the <code>$LATEST</code> version of all intents that contain the specified string.</p> </li> <li> <p> If you don't specify the <code>nameContains</code> field, returns information about the <code>$LATEST</code> version of all intents. </p> </li> </ul> <p> The operation requires permission for the <code>lex:GetIntents</code> action. </p>",
-            "description": "<p>Returns intent information as follows: </p> <ul> <li> <p>If you specify the <code>nameContains</code> field, returns the <code>$LATEST</code> version of all intents that contain the specified string.</p> </li> <li> <p> If you don't specify the <code>nameContains</code> field, returns information about the <code>$LATEST</code> version of all intents. </p> </li> </ul> <p> The operation requires permission for the <code>lex:GetIntents</code> action. </p>",
+            "title": "GetIntents",
+            "description": "Returns intent information as follows: \n\n *  If you specify the nameContains field, returns the $LATEST version of all\n   intents that contain the specified string.\n   \n   \n *   If you don't specify the nameContains field, returns information about the \n   $LATEST version of all intents. \n   \n   \n\n The operation requires permission for the lex:GetIntents action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -429,8 +429,8 @@
         },
         "DeleteIntent": {
             "main": "./lib/actions/DeleteIntent.js",
-            "title": "<p>Deletes all versions of the intent, including the <code>$LATEST</code> version. To delete a specific version of the intent, use the <a>DeleteIntentVersion</a> operation.</p> <p> You can delete a version of an intent only if it is not referenced. To delete an intent that is referred to in one or more bots (see <a>how-it-works</a>), you must remove those references first. </p> <note> <p> If you get the <code>ResourceInUseException</code> exception, it provides an example reference that shows where the intent is referenced. To remove the reference to the intent, either update the bot or delete it. If you get the same exception when you attempt to delete the intent again, repeat until the intent has no references and the call to <code>DeleteIntent</code> is successful. </p> </note> <p> This operation requires permission for the <code>lex:DeleteIntent</code> action. </p>",
-            "description": "<p>Deletes all versions of the intent, including the <code>$LATEST</code> version. To delete a specific version of the intent, use the <a>DeleteIntentVersion</a> operation.</p> <p> You can delete a version of an intent only if it is not referenced. To delete an intent that is referred to in one or more bots (see <a>how-it-works</a>), you must remove those references first. </p> <note> <p> If you get the <code>ResourceInUseException</code> exception, it provides an example reference that shows where the intent is referenced. To remove the reference to the intent, either update the bot or delete it. If you get the same exception when you attempt to delete the intent again, repeat until the intent has no references and the call to <code>DeleteIntent</code> is successful. </p> </note> <p> This operation requires permission for the <code>lex:DeleteIntent</code> action. </p>",
+            "title": "DeleteIntent",
+            "description": "Deletes all versions of the intent, including the $LATEST version. To delete a\nspecific version of the intent, use the DeleteIntentVersion operation.\n\n You can delete a version of an intent only if it is not referenced. To delete\nan intent that is referred to in one or more bots (see how-it-works), you must\nremove those references first. \n\n If you get the ResourceInUseException exception, it provides an example\nreference that shows where the intent is referenced. To remove the reference to\nthe intent, either update the bot or delete it. If you get the same exception\nwhen you attempt to delete the intent again, repeat until the intent has no\nreferences and the call to DeleteIntent is successful. \n\n This operation requires permission for the lex:DeleteIntent action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -446,8 +446,8 @@
         },
         "CreateIntentVersion": {
             "main": "./lib/actions/CreateIntentVersion.js",
-            "title": "<p>Creates a new version of an intent based on the <code>$LATEST</code> version of the intent. If the <code>$LATEST</code> version of this intent hasn't changed since you last updated it, Amazon Lex doesn't create a new version. It returns the last version you created.</p> <note> <p>You can update only the <code>$LATEST</code> version of the intent. You can't update the numbered versions that you create with the <code>CreateIntentVersion</code> operation.</p> </note> <p> When you create a version of an intent, Amazon Lex sets the version to 1. Subsequent versions increment by 1. For more information, see <a>versioning-intro</a>. </p> <p>This operation requires permissions to perform the <code>lex:CreateIntentVersion</code> action. </p>",
-            "description": "<p>Creates a new version of an intent based on the <code>$LATEST</code> version of the intent. If the <code>$LATEST</code> version of this intent hasn't changed since you last updated it, Amazon Lex doesn't create a new version. It returns the last version you created.</p> <note> <p>You can update only the <code>$LATEST</code> version of the intent. You can't update the numbered versions that you create with the <code>CreateIntentVersion</code> operation.</p> </note> <p> When you create a version of an intent, Amazon Lex sets the version to 1. Subsequent versions increment by 1. For more information, see <a>versioning-intro</a>. </p> <p>This operation requires permissions to perform the <code>lex:CreateIntentVersion</code> action. </p>",
+            "title": "CreateIntentVersion",
+            "description": "Creates a new version of an intent based on the $LATEST version of the intent.\nIf the $LATEST version of this intent hasn't changed since you last updated it,\nAmazon Lex doesn't create a new version. It returns the last version you\ncreated.\n\nYou can update only the $LATEST version of the intent. You can't update the\nnumbered versions that you create with the CreateIntentVersion operation.\n\n When you create a version of an intent, Amazon Lex sets the version to 1.\nSubsequent versions increment by 1. For more information, see versioning-intro. \n\nThis operation requires permissions to perform the lex:CreateIntentVersion \naction.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -463,8 +463,8 @@
         },
         "GetIntentVersions": {
             "main": "./lib/actions/GetIntentVersions.js",
-            "title": "<p>Gets information about all of the versions of an intent.</p> <p>The <code>GetIntentVersions</code> operation returns an <code>IntentMetadata</code> object for each version of an intent. For example, if an intent has three numbered versions, the <code>GetIntentVersions</code> operation returns four <code>IntentMetadata</code> objects in the response, one for each numbered version and one for the <code>$LATEST</code> version. </p> <p>The <code>GetIntentVersions</code> operation always returns at least one version, the <code>$LATEST</code> version.</p> <p>This operation requires permissions for the <code>lex:GetIntentVersions</code> action.</p>",
-            "description": "<p>Gets information about all of the versions of an intent.</p> <p>The <code>GetIntentVersions</code> operation returns an <code>IntentMetadata</code> object for each version of an intent. For example, if an intent has three numbered versions, the <code>GetIntentVersions</code> operation returns four <code>IntentMetadata</code> objects in the response, one for each numbered version and one for the <code>$LATEST</code> version. </p> <p>The <code>GetIntentVersions</code> operation always returns at least one version, the <code>$LATEST</code> version.</p> <p>This operation requires permissions for the <code>lex:GetIntentVersions</code> action.</p>",
+            "title": "GetIntentVersions",
+            "description": "Gets information about all of the versions of an intent.\n\nThe GetIntentVersions operation returns an IntentMetadata object for each\nversion of an intent. For example, if an intent has three numbered versions, the \nGetIntentVersions operation returns four IntentMetadata objects in the response,\none for each numbered version and one for the $LATEST version. \n\nThe GetIntentVersions operation always returns at least one version, the $LATEST \nversion.\n\nThis operation requires permissions for the lex:GetIntentVersions action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -480,8 +480,8 @@
         },
         "PutIntent": {
             "main": "./lib/actions/PutIntent.js",
-            "title": "<p>Creates an intent or replaces an existing intent.</p> <p>To define the interaction between the user and your bot, you use one or more intents. For a pizza ordering bot, for example, you would create an <code>OrderPizza</code> intent. </p> <p>To create an intent or replace an existing intent, you must provide the following:</p> <ul> <li> <p>Intent name. For example, <code>OrderPizza</code>.</p> </li> <li> <p>Sample utterances. For example, \"Can I order a pizza, please.\" and \"I want to order a pizza.\"</p> </li> <li> <p>Information to be gathered. You specify slot types for the information that your bot will request from the user. You can specify standard slot types, such as a date or a time, or custom slot types such as the size and crust of a pizza.</p> </li> <li> <p>How the intent will be fulfilled. You can provide a Lambda function or configure the intent to return the intent information to the client application. If you use a Lambda function, when all of the intent information is available, Amazon Lex invokes your Lambda function. If you configure your intent to return the intent information to the client application. </p> </li> </ul> <p>You can specify other optional information in the request, such as:</p> <ul> <li> <p>A confirmation prompt to ask the user to confirm an intent. For example, \"Shall I order your pizza?\"</p> </li> <li> <p>A conclusion statement to send to the user after the intent has been fulfilled. For example, \"I placed your pizza order.\"</p> </li> <li> <p>A follow-up prompt that asks the user for additional activity. For example, asking \"Do you want to order a drink with your pizza?\"</p> </li> </ul> <p>If you specify an existing intent name to update the intent, Amazon Lex replaces the values in the <code>$LATEST</code> version of the intent with the values in the request. Amazon Lex removes fields that you don't provide in the request. If you don't specify the required fields, Amazon Lex throws an exception. When you update the <code>$LATEST</code> version of an intent, the <code>status</code> field of any bot that uses the <code>$LATEST</code> version of the intent is set to <code>NOT_BUILT</code>.</p> <p>For more information, see <a>how-it-works</a>.</p> <p>This operation requires permissions for the <code>lex:PutIntent</code> action.</p>",
-            "description": "<p>Creates an intent or replaces an existing intent.</p> <p>To define the interaction between the user and your bot, you use one or more intents. For a pizza ordering bot, for example, you would create an <code>OrderPizza</code> intent. </p> <p>To create an intent or replace an existing intent, you must provide the following:</p> <ul> <li> <p>Intent name. For example, <code>OrderPizza</code>.</p> </li> <li> <p>Sample utterances. For example, \"Can I order a pizza, please.\" and \"I want to order a pizza.\"</p> </li> <li> <p>Information to be gathered. You specify slot types for the information that your bot will request from the user. You can specify standard slot types, such as a date or a time, or custom slot types such as the size and crust of a pizza.</p> </li> <li> <p>How the intent will be fulfilled. You can provide a Lambda function or configure the intent to return the intent information to the client application. If you use a Lambda function, when all of the intent information is available, Amazon Lex invokes your Lambda function. If you configure your intent to return the intent information to the client application. </p> </li> </ul> <p>You can specify other optional information in the request, such as:</p> <ul> <li> <p>A confirmation prompt to ask the user to confirm an intent. For example, \"Shall I order your pizza?\"</p> </li> <li> <p>A conclusion statement to send to the user after the intent has been fulfilled. For example, \"I placed your pizza order.\"</p> </li> <li> <p>A follow-up prompt that asks the user for additional activity. For example, asking \"Do you want to order a drink with your pizza?\"</p> </li> </ul> <p>If you specify an existing intent name to update the intent, Amazon Lex replaces the values in the <code>$LATEST</code> version of the intent with the values in the request. Amazon Lex removes fields that you don't provide in the request. If you don't specify the required fields, Amazon Lex throws an exception. When you update the <code>$LATEST</code> version of an intent, the <code>status</code> field of any bot that uses the <code>$LATEST</code> version of the intent is set to <code>NOT_BUILT</code>.</p> <p>For more information, see <a>how-it-works</a>.</p> <p>This operation requires permissions for the <code>lex:PutIntent</code> action.</p>",
+            "title": "PutIntent",
+            "description": "Creates an intent or replaces an existing intent.\n\nTo define the interaction between the user and your bot, you use one or more\nintents. For a pizza ordering bot, for example, you would create an OrderPizza \nintent. \n\nTo create an intent or replace an existing intent, you must provide the\nfollowing:\n\n *  Intent name. For example, OrderPizza.\n   \n   \n *  Sample utterances. For example, \"Can I order a pizza, please.\" and \"I want\n   to order a pizza.\"\n   \n   \n *  Information to be gathered. You specify slot types for the information that\n   your bot will request from the user. You can specify standard slot types,\n   such as a date or a time, or custom slot types such as the size and crust of\n   a pizza.\n   \n   \n *  How the intent will be fulfilled. You can provide a Lambda function or\n   configure the intent to return the intent information to the client\n   application. If you use a Lambda function, when all of the intent information\n   is available, Amazon Lex invokes your Lambda function. If you configure your\n   intent to return the intent information to the client application. \n   \n   \n\nYou can specify other optional information in the request, such as:\n\n *  A confirmation prompt to ask the user to confirm an intent. For example,\n   \"Shall I order your pizza?\"\n   \n   \n *  A conclusion statement to send to the user after the intent has been\n   fulfilled. For example, \"I placed your pizza order.\"\n   \n   \n *  A follow-up prompt that asks the user for additional activity. For example,\n   asking \"Do you want to order a drink with your pizza?\"\n   \n   \n\nIf you specify an existing intent name to update the intent, Amazon Lex replaces\nthe values in the $LATEST version of the intent with the values in the request.\nAmazon Lex removes fields that you don't provide in the request. If you don't\nspecify the required fields, Amazon Lex throws an exception. When you update the \n$LATEST version of an intent, the status field of any bot that uses the $LATEST \nversion of the intent is set to NOT_BUILT.\n\nFor more information, see how-it-works.\n\nThis operation requires permissions for the lex:PutIntent action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -497,8 +497,8 @@
         },
         "DeleteIntentVersion": {
             "main": "./lib/actions/DeleteIntentVersion.js",
-            "title": "<p>Deletes a specific version of an intent. To delete all versions of a intent, use the <a>DeleteIntent</a> operation. </p> <p>This operation requires permissions for the <code>lex:DeleteIntentVersion</code> action.</p>",
-            "description": "<p>Deletes a specific version of an intent. To delete all versions of a intent, use the <a>DeleteIntent</a> operation. </p> <p>This operation requires permissions for the <code>lex:DeleteIntentVersion</code> action.</p>",
+            "title": "DeleteIntentVersion",
+            "description": "Deletes a specific version of an intent. To delete all versions of a intent, use\nthe DeleteIntent operation. \n\nThis operation requires permissions for the lex:DeleteIntentVersion action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -514,8 +514,8 @@
         },
         "GetIntent": {
             "main": "./lib/actions/GetIntent.js",
-            "title": "<p> Returns information about an intent. In addition to the intent name, you must specify the intent version. </p> <p> This operation requires permissions to perform the <code>lex:GetIntent</code> action. </p>",
-            "description": "<p> Returns information about an intent. In addition to the intent name, you must specify the intent version. </p> <p> This operation requires permissions to perform the <code>lex:GetIntent</code> action. </p>",
+            "title": "GetIntent",
+            "description": " Returns information about an intent. In addition to the intent name, you must\nspecify the intent version. \n\n This operation requires permissions to perform the lex:GetIntent action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -531,8 +531,8 @@
         },
         "GetSlotTypes": {
             "main": "./lib/actions/GetSlotTypes.js",
-            "title": "<p>Returns slot type information as follows: </p> <ul> <li> <p>If you specify the <code>nameContains</code> field, returns the <code>$LATEST</code> version of all slot types that contain the specified string.</p> </li> <li> <p> If you don't specify the <code>nameContains</code> field, returns information about the <code>$LATEST</code> version of all slot types. </p> </li> </ul> <p> The operation requires permission for the <code>lex:GetSlotTypes</code> action. </p>",
-            "description": "<p>Returns slot type information as follows: </p> <ul> <li> <p>If you specify the <code>nameContains</code> field, returns the <code>$LATEST</code> version of all slot types that contain the specified string.</p> </li> <li> <p> If you don't specify the <code>nameContains</code> field, returns information about the <code>$LATEST</code> version of all slot types. </p> </li> </ul> <p> The operation requires permission for the <code>lex:GetSlotTypes</code> action. </p>",
+            "title": "GetSlotTypes",
+            "description": "Returns slot type information as follows: \n\n *  If you specify the nameContains field, returns the $LATEST version of all\n   slot types that contain the specified string.\n   \n   \n *   If you don't specify the nameContains field, returns information about the \n   $LATEST version of all slot types. \n   \n   \n\n The operation requires permission for the lex:GetSlotTypes action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -548,8 +548,8 @@
         },
         "DeleteSlotType": {
             "main": "./lib/actions/DeleteSlotType.js",
-            "title": "<p>Deletes all versions of the slot type, including the <code>$LATEST</code> version. To delete a specific version of the slot type, use the <a>DeleteSlotTypeVersion</a> operation.</p> <p> You can delete a version of a slot type only if it is not referenced. To delete a slot type that is referred to in one or more intents, you must remove those references first. </p> <note> <p> If you get the <code>ResourceInUseException</code> exception, the exception provides an example reference that shows the intent where the slot type is referenced. To remove the reference to the slot type, either update the intent or delete it. If you get the same exception when you attempt to delete the slot type again, repeat until the slot type has no references and the <code>DeleteSlotType</code> call is successful. </p> </note> <p>This operation requires permission for the <code>lex:DeleteSlotType</code> action.</p>",
-            "description": "<p>Deletes all versions of the slot type, including the <code>$LATEST</code> version. To delete a specific version of the slot type, use the <a>DeleteSlotTypeVersion</a> operation.</p> <p> You can delete a version of a slot type only if it is not referenced. To delete a slot type that is referred to in one or more intents, you must remove those references first. </p> <note> <p> If you get the <code>ResourceInUseException</code> exception, the exception provides an example reference that shows the intent where the slot type is referenced. To remove the reference to the slot type, either update the intent or delete it. If you get the same exception when you attempt to delete the slot type again, repeat until the slot type has no references and the <code>DeleteSlotType</code> call is successful. </p> </note> <p>This operation requires permission for the <code>lex:DeleteSlotType</code> action.</p>",
+            "title": "DeleteSlotType",
+            "description": "Deletes all versions of the slot type, including the $LATEST version. To delete\na specific version of the slot type, use the DeleteSlotTypeVersion operation.\n\n You can delete a version of a slot type only if it is not referenced. To delete\na slot type that is referred to in one or more intents, you must remove those\nreferences first. \n\n If you get the ResourceInUseException exception, the exception provides an\nexample reference that shows the intent where the slot type is referenced. To\nremove the reference to the slot type, either update the intent or delete it. If\nyou get the same exception when you attempt to delete the slot type again,\nrepeat until the slot type has no references and the DeleteSlotType call is\nsuccessful. \n\nThis operation requires permission for the lex:DeleteSlotType action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -565,8 +565,8 @@
         },
         "DeleteSlotTypeVersion": {
             "main": "./lib/actions/DeleteSlotTypeVersion.js",
-            "title": "<p>Deletes a specific version of a slot type. To delete all versions of a slot type, use the <a>DeleteSlotType</a> operation. </p> <p>This operation requires permissions for the <code>lex:DeleteSlotTypeVersion</code> action.</p>",
-            "description": "<p>Deletes a specific version of a slot type. To delete all versions of a slot type, use the <a>DeleteSlotType</a> operation. </p> <p>This operation requires permissions for the <code>lex:DeleteSlotTypeVersion</code> action.</p>",
+            "title": "DeleteSlotTypeVersion",
+            "description": "Deletes a specific version of a slot type. To delete all versions of a slot\ntype, use the DeleteSlotType operation. \n\nThis operation requires permissions for the lex:DeleteSlotTypeVersion action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -582,8 +582,8 @@
         },
         "CreateSlotTypeVersion": {
             "main": "./lib/actions/CreateSlotTypeVersion.js",
-            "title": "<p>Creates a new version of a slot type based on the <code>$LATEST</code> version of the specified slot type. If the <code>$LATEST</code> version of this resource has not changed since the last version that you created, Amazon Lex doesn't create a new version. It returns the last version that you created. </p> <note> <p>You can update only the <code>$LATEST</code> version of a slot type. You can't update the numbered versions that you create with the <code>CreateSlotTypeVersion</code> operation.</p> </note> <p>When you create a version of a slot type, Amazon Lex sets the version to 1. Subsequent versions increment by 1. For more information, see <a>versioning-intro</a>. </p> <p>This operation requires permissions for the <code>lex:CreateSlotTypeVersion</code> action.</p>",
-            "description": "<p>Creates a new version of a slot type based on the <code>$LATEST</code> version of the specified slot type. If the <code>$LATEST</code> version of this resource has not changed since the last version that you created, Amazon Lex doesn't create a new version. It returns the last version that you created. </p> <note> <p>You can update only the <code>$LATEST</code> version of a slot type. You can't update the numbered versions that you create with the <code>CreateSlotTypeVersion</code> operation.</p> </note> <p>When you create a version of a slot type, Amazon Lex sets the version to 1. Subsequent versions increment by 1. For more information, see <a>versioning-intro</a>. </p> <p>This operation requires permissions for the <code>lex:CreateSlotTypeVersion</code> action.</p>",
+            "title": "CreateSlotTypeVersion",
+            "description": "Creates a new version of a slot type based on the $LATEST version of the\nspecified slot type. If the $LATEST version of this resource has not changed\nsince the last version that you created, Amazon Lex doesn't create a new\nversion. It returns the last version that you created. \n\nYou can update only the $LATEST version of a slot type. You can't update the\nnumbered versions that you create with the CreateSlotTypeVersion operation.\n\nWhen you create a version of a slot type, Amazon Lex sets the version to 1.\nSubsequent versions increment by 1. For more information, see versioning-intro. \n\nThis operation requires permissions for the lex:CreateSlotTypeVersion action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -599,8 +599,8 @@
         },
         "GetSlotTypeVersions": {
             "main": "./lib/actions/GetSlotTypeVersions.js",
-            "title": "<p>Gets information about all versions of a slot type.</p> <p>The <code>GetSlotTypeVersions</code> operation returns a <code>SlotTypeMetadata</code> object for each version of a slot type. For example, if a slot type has three numbered versions, the <code>GetSlotTypeVersions</code> operation returns four <code>SlotTypeMetadata</code> objects in the response, one for each numbered version and one for the <code>$LATEST</code> version. </p> <p>The <code>GetSlotTypeVersions</code> operation always returns at least one version, the <code>$LATEST</code> version.</p> <p>This operation requires permissions for the <code>lex:GetSlotTypeVersions</code> action.</p>",
-            "description": "<p>Gets information about all versions of a slot type.</p> <p>The <code>GetSlotTypeVersions</code> operation returns a <code>SlotTypeMetadata</code> object for each version of a slot type. For example, if a slot type has three numbered versions, the <code>GetSlotTypeVersions</code> operation returns four <code>SlotTypeMetadata</code> objects in the response, one for each numbered version and one for the <code>$LATEST</code> version. </p> <p>The <code>GetSlotTypeVersions</code> operation always returns at least one version, the <code>$LATEST</code> version.</p> <p>This operation requires permissions for the <code>lex:GetSlotTypeVersions</code> action.</p>",
+            "title": "GetSlotTypeVersions",
+            "description": "Gets information about all versions of a slot type.\n\nThe GetSlotTypeVersions operation returns a SlotTypeMetadata object for each\nversion of a slot type. For example, if a slot type has three numbered versions,\nthe GetSlotTypeVersions operation returns four SlotTypeMetadata objects in the\nresponse, one for each numbered version and one for the $LATEST version. \n\nThe GetSlotTypeVersions operation always returns at least one version, the \n$LATEST version.\n\nThis operation requires permissions for the lex:GetSlotTypeVersions action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -616,8 +616,8 @@
         },
         "PutSlotType": {
             "main": "./lib/actions/PutSlotType.js",
-            "title": "<p>Creates a custom slot type or replaces an existing custom slot type.</p> <p>To create a custom slot type, specify a name for the slot type and a set of enumeration values, which are the values that a slot of this type can assume. For more information, see <a>how-it-works</a>.</p> <p>If you specify the name of an existing slot type, the fields in the request replace the existing values in the <code>$LATEST</code> version of the slot type. Amazon Lex removes the fields that you don't provide in the request. If you don't specify required fields, Amazon Lex throws an exception. When you update the <code>$LATEST</code> version of a slot type, if a bot uses the <code>$LATEST</code> version of an intent that contains the slot type, the bot's <code>status</code> field is set to <code>NOT_BUILT</code>.</p> <p>This operation requires permissions for the <code>lex:PutSlotType</code> action.</p>",
-            "description": "<p>Creates a custom slot type or replaces an existing custom slot type.</p> <p>To create a custom slot type, specify a name for the slot type and a set of enumeration values, which are the values that a slot of this type can assume. For more information, see <a>how-it-works</a>.</p> <p>If you specify the name of an existing slot type, the fields in the request replace the existing values in the <code>$LATEST</code> version of the slot type. Amazon Lex removes the fields that you don't provide in the request. If you don't specify required fields, Amazon Lex throws an exception. When you update the <code>$LATEST</code> version of a slot type, if a bot uses the <code>$LATEST</code> version of an intent that contains the slot type, the bot's <code>status</code> field is set to <code>NOT_BUILT</code>.</p> <p>This operation requires permissions for the <code>lex:PutSlotType</code> action.</p>",
+            "title": "PutSlotType",
+            "description": "Creates a custom slot type or replaces an existing custom slot type.\n\nTo create a custom slot type, specify a name for the slot type and a set of\nenumeration values, which are the values that a slot of this type can assume.\nFor more information, see how-it-works.\n\nIf you specify the name of an existing slot type, the fields in the request\nreplace the existing values in the $LATEST version of the slot type. Amazon Lex\nremoves the fields that you don't provide in the request. If you don't specify\nrequired fields, Amazon Lex throws an exception. When you update the $LATEST \nversion of a slot type, if a bot uses the $LATEST version of an intent that\ncontains the slot type, the bot's status field is set to NOT_BUILT.\n\nThis operation requires permissions for the lex:PutSlotType action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
@@ -633,8 +633,8 @@
         },
         "GetSlotType": {
             "main": "./lib/actions/GetSlotType.js",
-            "title": "<p>Returns information about a specific version of a slot type. In addition to specifying the slot type name, you must specify the slot type version.</p> <p>This operation requires permissions for the <code>lex:GetSlotType</code> action.</p>",
-            "description": "<p>Returns information about a specific version of a slot type. In addition to specifying the slot type name, you must specify the slot type version.</p> <p>This operation requires permissions for the <code>lex:GetSlotType</code> action.</p>",
+            "title": "GetSlotType",
+            "description": "Returns information about a specific version of a slot type. In addition to\nspecifying the slot type name, you must specify the slot type version.\n\nThis operation requires permissions for the lex:GetSlotType action.",
             "fields": {
                 "verbose": {
                     "viewClass": "CheckBoxView",
